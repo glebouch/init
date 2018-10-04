@@ -1,0 +1,3 @@
+# En root "sudo su"
+
+service ssh restart

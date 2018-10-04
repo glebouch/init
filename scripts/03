@@ -1,0 +1,11 @@
+#! /bin/bash
+
+if [ -d $1 ]
+then
+	ls -lhS $1 | grep ^-
+fi
+
+#
+# S for the size
+# h for the human version
+#
