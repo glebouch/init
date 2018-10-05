@@ -1,9 +1,10 @@
-#! /bin/bash
+#! /bin/sh
 
-echo 'apt-get update && apt-get upgrade &>/var/log/update_script.log'>~/apt-update.sh
+echo 'apt-get update && apt-get upgrade -y &>/var/log/update_script.log'>~/apt-update.sh
+chmod +x ~/apt-update.sh
 
 #
 # Add the task to crontab
 # run crontab -e
-# 0 4 * * 1 root bash ~/apt-update.sh
+# 0 4 * * 1 root sh ~/apt-update.sh
 #

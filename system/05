@@ -1,3 +1,3 @@
-# En root "sudo su"
+#! /bin/sh
 
-service ssh status
+systemctl status sshd

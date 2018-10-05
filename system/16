@@ -1,1 +1,4 @@
-Cron sous la forme MIN HOUR DAY MONTH WEEKDAY root /home/backup/backup.cmd &> /dev/null pour ne pas recevoir de notification
+cron
+crontab -e
+mm hh jj MMM JJJ [user] tâche > log
+log = /dev/null pour ne pas recevoir de notification
