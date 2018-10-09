@@ -7,9 +7,9 @@ FILE=/etc/crontab
 FILE_SAVE=/etc/.crontab_save
 
 
-if [ -d "$FILE_SAVE" ]
+if [ ! -f "$FILE_SAVE" ]
 then
-	cp $FILE $FILE_SAVE
+	sudo cp $FILE $FILE_SAVE
 	exit 0
 fi
 
