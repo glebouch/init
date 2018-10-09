@@ -1,4 +1,4 @@
 cron
 crontab -e
-mm hh jj MMM JJJ [user] tâche > log
-log = /dev/null pour ne pas recevoir de notification
+mm hh jj MMM JJJ [user] task > log
+log = /dev/null no notification

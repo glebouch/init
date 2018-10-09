@@ -1,4 +1,4 @@
-#! bi/sh
+#! bin/sh
 
 #sudo apt-get install postfix mailutils
 
@@ -16,7 +16,7 @@ fi
 MD5=`md5sum $FILE | awk '{ print $1 }'`
 MD5_SAVE=`md5sum $FILE_SAVE | awk '{ print $1 }'`
 
-if [ MD5 != MD5_SAVE ]
+if [ $MD5 != $MD5_SAVE ]
 then
 	sudo echo "Crontabfile has been modified" | mail -s "Modification log" root
 fi
@@ -26,5 +26,5 @@ sudo cp $FILE $FILE_SAVE
 #
 # create task:
 # run crontab -e
-# write "0 0 * * * root bash ~/cron-modif.sh"
+# write "0 0 * * * /bin/sh ~/cron-modif.sh 2> /tmp/error_cron"
 #
