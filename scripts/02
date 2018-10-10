@@ -6,5 +6,5 @@ chmod +x ~/apt-update.sh
 #
 # Add the task to crontab
 # run crontab -e
-# 0 4 * * 1 root sh ~/apt-update.sh
+# 0 4 * * 1 root /bin/sh ~/apt-update.sh >>/etc/update_logs
 #
